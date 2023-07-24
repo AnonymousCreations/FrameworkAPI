@@ -1,0 +1,2126 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://AnonymousCreations.github.io/Framework/API/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Best%20Practices/">
+      
+      <link rel="icon" href="../images/AC.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
+    
+    
+      
+        <title>API - Anonymous Creations Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/button.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Anonymous Creations Framework" class="md-header__button md-logo" aria-label="Anonymous Creations Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 80v48c0 17.7 14.3 32 32 32h64V80c0-26.5-21.5-48-48-48S0 53.5 0 80zm112-48c10 13.4 16 30 16 48v304c0 35.3 28.7 64 64 64s64-28.7 64-64v-5.3c0-32.4 26.3-58.7 58.7-58.7H480V128c0-53-43-96-96-96H112zm352 448c61.9 0 112-50.1 112-112 0-8.8-7.2-16-16-16H314.7c-14.7 0-26.7 11.9-26.7 26.7v5.3c0 53-43 96-96 96h272z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anonymous Creations Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="light_blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AnonymousCreations/Framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Anonymous Creations Framework" class="md-nav__button md-logo" aria-label="Anonymous Creations Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 80v48c0 17.7 14.3 32 32 32h64V80c0-26.5-21.5-48-48-48S0 53.5 0 80zm112-48c10 13.4 16 30 16 48v304c0 35.3 28.7 64 64 64s64-28.7 64-64v-5.3c0-32.4 26.3-58.7 58.7-58.7H480V128c0-53-43-96-96-96H112zm352 448c61.9 0 112-50.1 112-112 0-8.8-7.2-16-16-16H314.7c-14.7 0-26.7 11.9-26.7 26.7v5.3c0 53-43 96-96 96h272z"/></svg>
+
+    </a>
+    Anonymous Creations Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AnonymousCreations/Framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-modules" class="md-nav__link">
+    Client Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guifx" class="md-nav__link">
+    GUIFX
+  </a>
+  
+    <nav class="md-nav" aria-label="GUIFX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttonfx" class="md-nav__link">
+    ButtonFX()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friends" class="md-nav__link">
+    Friends
+  </a>
+  
+    <nav class="md-nav" aria-label="Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getnumberoffriendsingame" class="md-nav__link">
+    GetNumberOfFriendsInGame()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrandomfriend" class="md-nav__link">
+    GetRandomFriend()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactions" class="md-nav__link">
+    Interactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interact" class="md-nav__link">
+    Interact()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximity" class="md-nav__link">
+    Proximity
+  </a>
+  
+    <nav class="md-nav" aria-label="Proximity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proximitynew" class="md-nav__link">
+    Proximity.New()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isinrange" class="md-nav__link">
+    IsInRange()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-modules" class="md-nav__link">
+    Server Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userdata" class="md-nav__link">
+    UserData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasystem" class="md-nav__link">
+    DataSystem
+  </a>
+  
+    <nav class="md-nav" aria-label="DataSystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getdataasync" class="md-nav__link">
+    GetDataAsync()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataloaded" class="md-nav__link">
+    DataLoaded()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletedataasync" class="md-nav__link">
+    DeleteDataAsync()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#badges" class="md-nav__link">
+    Badges
+  </a>
+  
+    <nav class="md-nav" aria-label="Badges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#give" class="md-nav__link">
+    Give
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boosts" class="md-nav__link">
+    Boosts
+  </a>
+  
+    <nav class="md-nav" aria-label="Boosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getboost" class="md-nav__link">
+    GetBoost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useboost" class="md-nav__link">
+    UseBoost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addboost" class="md-nav__link">
+    AddBoost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-modules" class="md-nav__link">
+    Shared Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Shared Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared" class="md-nav__link">
+    Shared
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#player" class="md-nav__link">
+    Player
+  </a>
+  
+    <nav class="md-nav" aria-label="Player">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    Get
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    Animation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createparticle" class="md-nav__link">
+    CreateParticle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generatename" class="md-nav__link">
+    GenerateName()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    Loop()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrollingresize" class="md-nav__link">
+    ScrollingResize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    Table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tween" class="md-nav__link">
+    Tween()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    Audio
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playsound" class="md-nav__link">
+    PlaySound()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loopsound" class="md-nav__link">
+    LoopSound()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopsound" class="md-nav__link">
+    StopSound()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatters" class="md-nav__link">
+    Formatters
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviation" class="md-nav__link">
+    Abbreviation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commas" class="md-nav__link">
+    Commas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatminutes" class="md-nav__link">
+    FormatMinutes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatseconds" class="md-nav__link">
+    FormatSeconds()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    Math
+  </a>
+  
+    <nav class="md-nav" aria-label="Math">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cubicbezier" class="md-nav__link">
+    CubicBezier()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadbezier" class="md-nav__link">
+    QuadBezier()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverselerp" class="md-nav__link">
+    InverseLerp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lerp" class="md-nav__link">
+    Lerp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    Random()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerverification" class="md-nav__link">
+    PlayerVerification
+  </a>
+  
+    <nav class="md-nav" aria-label="PlayerVerification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getplatform" class="md-nav__link">
+    GetPlatform()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isingroup" class="md-nav__link">
+    IsInGroup()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isverified" class="md-nav__link">
+    IsVerified()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premium" class="md-nav__link">
+    Premium()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies" class="md-nav__link">
+    Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canseeads" class="md-nav__link">
+    CanSeeAds()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cantrade" class="md-nav__link">
+    CanTrade()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canviewlinks" class="md-nav__link">
+    CanViewLinks()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasaccesstorandomitems" class="md-nav__link">
+    HasAccessToRandomItems()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-list" class="md-nav__link">
+    Error List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Best%20Practices/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-modules" class="md-nav__link">
+    Client Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Client Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guifx" class="md-nav__link">
+    GUIFX
+  </a>
+  
+    <nav class="md-nav" aria-label="GUIFX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buttonfx" class="md-nav__link">
+    ButtonFX()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#friends" class="md-nav__link">
+    Friends
+  </a>
+  
+    <nav class="md-nav" aria-label="Friends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getnumberoffriendsingame" class="md-nav__link">
+    GetNumberOfFriendsInGame()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrandomfriend" class="md-nav__link">
+    GetRandomFriend()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactions" class="md-nav__link">
+    Interactions
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interact" class="md-nav__link">
+    Interact()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximity" class="md-nav__link">
+    Proximity
+  </a>
+  
+    <nav class="md-nav" aria-label="Proximity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proximitynew" class="md-nav__link">
+    Proximity.New()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isinrange" class="md-nav__link">
+    IsInRange()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-modules" class="md-nav__link">
+    Server Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userdata" class="md-nav__link">
+    UserData
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datasystem" class="md-nav__link">
+    DataSystem
+  </a>
+  
+    <nav class="md-nav" aria-label="DataSystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getdataasync" class="md-nav__link">
+    GetDataAsync()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataloaded" class="md-nav__link">
+    DataLoaded()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletedataasync" class="md-nav__link">
+    DeleteDataAsync()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#badges" class="md-nav__link">
+    Badges
+  </a>
+  
+    <nav class="md-nav" aria-label="Badges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#give" class="md-nav__link">
+    Give
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boosts" class="md-nav__link">
+    Boosts
+  </a>
+  
+    <nav class="md-nav" aria-label="Boosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getboost" class="md-nav__link">
+    GetBoost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useboost" class="md-nav__link">
+    UseBoost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addboost" class="md-nav__link">
+    AddBoost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-modules" class="md-nav__link">
+    Shared Modules
+  </a>
+  
+    <nav class="md-nav" aria-label="Shared Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared" class="md-nav__link">
+    Shared
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#player" class="md-nav__link">
+    Player
+  </a>
+  
+    <nav class="md-nav" aria-label="Player">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    Get
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+    <nav class="md-nav" aria-label="General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#animation" class="md-nav__link">
+    Animation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createparticle" class="md-nav__link">
+    CreateParticle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generatename" class="md-nav__link">
+    GenerateName()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    Loop()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrollingresize" class="md-nav__link">
+    ScrollingResize()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    Table()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tween" class="md-nav__link">
+    Tween()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    Audio
+  </a>
+  
+    <nav class="md-nav" aria-label="Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playsound" class="md-nav__link">
+    PlaySound()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loopsound" class="md-nav__link">
+    LoopSound()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopsound" class="md-nav__link">
+    StopSound()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatters" class="md-nav__link">
+    Formatters
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abbreviation" class="md-nav__link">
+    Abbreviation()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commas" class="md-nav__link">
+    Commas()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatminutes" class="md-nav__link">
+    FormatMinutes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatseconds" class="md-nav__link">
+    FormatSeconds()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#math" class="md-nav__link">
+    Math
+  </a>
+  
+    <nav class="md-nav" aria-label="Math">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cubicbezier" class="md-nav__link">
+    CubicBezier()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quadbezier" class="md-nav__link">
+    QuadBezier()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverselerp" class="md-nav__link">
+    InverseLerp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lerp" class="md-nav__link">
+    Lerp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random" class="md-nav__link">
+    Random()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerverification" class="md-nav__link">
+    PlayerVerification
+  </a>
+  
+    <nav class="md-nav" aria-label="PlayerVerification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getplatform" class="md-nav__link">
+    GetPlatform()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isingroup" class="md-nav__link">
+    IsInGroup()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isverified" class="md-nav__link">
+    IsVerified()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#premium" class="md-nav__link">
+    Premium()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policies" class="md-nav__link">
+    Policies
+  </a>
+  
+    <nav class="md-nav" aria-label="Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canseeads" class="md-nav__link">
+    CanSeeAds()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cantrade" class="md-nav__link">
+    CanTrade()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canviewlinks" class="md-nav__link">
+    CanViewLinks()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasaccesstorandomitems" class="md-nav__link">
+    HasAccessToRandomItems()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-list" class="md-nav__link">
+    Error List
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="api"><abbr title="Application Programming Interface">API</abbr><a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<p>This serves as the <abbr title="Application Programming Interface">API</abbr> for the framework. Within this page, a comprehensive compilation of all modules within the framework shall be presented, accompanied by examples showcasing their functionality.</p>
+<div class="admonition note">
+<p class="admonition-title">Notice</p>
+<p>The structure of this <abbr title="Application Programming Interface">API</abbr> has been designed to facilitate clear visibility of parameters alongside their respective types. As is customary with most APIs, you will encounter a type designation, such as "Vector3," followed by the corresponding variable name. For instance, "Vector3 Position" where "Vector3" represents the type and "Position" serves as the variable name.</p>
+<p>The return type is also shown outside of the function name and separated using a |.</p>
+</div>
+<h2 id="client-modules">Client Modules<a class="headerlink" href="#client-modules" title="Permanent link">&para;</a></h2>
+<h4 id="gui">GUI<a class="headerlink" href="#gui" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">GUI</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the client. Please be aware of this before using it.</p>
+</div>
+<p>Returns every GuiObject in the game. This allows for easy access to all UI elements.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">GUI</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">GUI</span>
+<span class="kd">local</span> <span class="n">Main</span> <span class="o">=</span> <span class="n">GUI</span><span class="p">.</span><span class="n">Main</span>
+<span class="kd">local</span> <span class="n">Coins</span> <span class="o">=</span> <span class="n">Main</span><span class="p">.</span><span class="n">LeftHolder</span><span class="p">.</span><span class="n">Coins</span>
+</code></pre></div></p>
+<h3 id="guifx">GUIFX<a class="headerlink" href="#guifx" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">GUIFX</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the client. Please be aware of this before using it.</p>
+</div>
+<p>Returns all GUIFX modules.</p>
+<h4 id="buttonfx">ButtonFX()<a class="headerlink" href="#buttonfx" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">GUIFX</span><span class="p">.</span><span class="n">ButtonFX</span><span class="p">(</span><span class="n">GuiButton</span><span class="w"> </span><span class="n">Button</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">void</span>
+</code></pre></div>
+Creates an animation for buttons on MouseEnter, Leave, Button1Down, and Button1Up.</p>
+<h3 id="friends">Friends<a class="headerlink" href="#friends" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Friends</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the client. Please be aware of this before using it.</p>
+</div>
+<p>Contains all the functions for friends.</p>
+<h4 id="getnumberoffriendsingame">GetNumberOfFriendsInGame()<a class="headerlink" href="#getnumberoffriendsingame" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Friends</span><span class="p">.</span><span class="n">GetNumberOfFriendsInGame</span><span class="p">()</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">number</span>
+</code></pre></div>
+Returns how many of the local players friends that are currently in their server.</p>
+<h4 id="getrandomfriend">GetRandomFriend()<a class="headerlink" href="#getrandomfriend" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Friends</span><span class="p">.</span><span class="n">GetRandomFriend</span><span class="p">()</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">number</span>
+</code></pre></div>
+Returns a random <code>UserId</code> from the local players friend list. Returns their <code>UserId</code> of they have no friends.</p>
+<h3 id="interactions">Interactions<a class="headerlink" href="#interactions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Interactions</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the client. Please be aware of this before using it.</p>
+</div>
+<p>Contains all the functions for interactions. Specifically, an interaction refers to a client-side, custom proximity prompt GUI,  designed to allow for simple and efficient setup.</p>
+<h4 id="interact">Interact()<a class="headerlink" href="#interact" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Interactions</span><span class="p">.</span><span class="n">Interact</span><span class="p">(</span><span class="n">Instance</span><span class="w"> </span><span class="n">Target</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Position</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">RBXScriptSignal</span>
+</code></pre></div>
+Creates a new interaction and returns an event to detect input.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">OnInteraction</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interaction&quot;</span><span class="p">)</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Interaction</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Interactions</span><span class="p">.</span><span class="n">Interact</span><span class="p">(</span><span class="n">InteractPart</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">Interaction</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">OnInteraction</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="proximity">Proximity<a class="headerlink" href="#proximity" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Proximity</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the client. Please be aware of this before using it.</p>
+</div>
+<h4 id="proximitynew">Proximity.New()<a class="headerlink" href="#proximitynew" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Proximity</span><span class="p">.</span><span class="n">New</span><span class="p">(</span><span class="n">Instance</span><span class="w"> </span><span class="n">Target</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Position</span><span class="p">,</span><span class="w"> </span><span class="n">BillboardGui</span><span class="w"> </span><span class="n">ProximityUI</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">void</span>
+</code></pre></div>
+Creates a new proximity UI on the target.</p>
+<h4 id="isinrange">IsInRange()<a class="headerlink" href="#isinrange" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Proximity</span><span class="p">.</span><span class="n">IsInRange</span><span class="p">(</span><span class="n">Instance</span><span class="w"> </span><span class="n">Target</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">MaxDistance</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the local character is in range of the target.</p>
+<h2 id="server-modules">Server Modules<a class="headerlink" href="#server-modules" title="Permanent link">&para;</a></h2>
+<h4 id="userdata">UserData<a class="headerlink" href="#userdata" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">UserData</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This module is not meant to be modified or read through scripts. If you are trying to get the player's data, please use the <code>DataSystem</code> instead.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<p>A module that holds all of the user data that is stored in <code>DataStores</code>.</p>
+<h3 id="datasystem">DataSystem<a class="headerlink" href="#datasystem" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">DataSystem</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<p>The <code>DataSystem</code> handles all game data and contains all of the functions needed to manipulate and track player data.</p>
+<h4 id="getdataasync">GetDataAsync()<a class="headerlink" href="#getdataasync" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">DataSystem</span><span class="p">.</span><span class="n">GetDataAsync</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">DataPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Dictionary</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">This Function Yields</p>
+<p>Take into consideration that this function can yield. It is encouraged to ensure that your code accommodates this behavior when using the function.</p>
+</div>
+<p>Loads and returns all player data. This function can yield up to 30 seconds. If data loading fails at any point, it will kick the player from the server to prevent data loss.</p>
+<p>This function should only be run once per script if possible to reduce script yielding. See an example below of how to do this.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="c1">---- Framework Modules</span>
+<span class="kd">local</span> <span class="n">DataSystem</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">DataSystem</span>
+<span class="kd">local</span> <span class="n">Network</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Network</span>
+
+<span class="c1">---- Variables</span>
+<span class="kd">local</span> <span class="n">PlayerData</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1">---- Functions</span>
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">ReturnData</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span>
+    <span class="kd">local</span> <span class="n">Data</span> <span class="o">=</span> <span class="n">PlayerData</span><span class="p">[</span><span class="n">Player</span><span class="p">]</span> <span class="ow">or</span> <span class="n">DataSystem</span><span class="p">.</span><span class="n">GetDataAsync</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">Data</span> <span class="kr">then</span> <span class="nb">warn</span><span class="p">(</span><span class="s2">&quot;Cannot find data for &quot;</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">Player</span><span class="p">));</span> <span class="kr">return</span> <span class="kc">false</span> <span class="kr">end</span>
+
+    <span class="kr">return</span> <span class="n">Data</span>
+<span class="kr">end</span>
+
+<span class="c1">---- Handle player joining</span>
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">OnPlayerAdded</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">PlayerData</span><span class="p">[</span><span class="n">Player</span><span class="p">]</span> <span class="kr">then</span>
+        <span class="kd">local</span> <span class="n">success</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="nb">pcall</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+            <span class="n">PlayerData</span><span class="p">[</span><span class="n">Player</span><span class="p">]</span> <span class="o">=</span> <span class="n">DataSystem</span><span class="p">.</span><span class="n">GetDataAsync</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span>
+        <span class="kr">end</span><span class="p">)</span>
+
+        <span class="kr">if</span> <span class="ow">not</span> <span class="n">success</span> <span class="kr">then</span> <span class="kr">return</span> <span class="nb">warn</span><span class="p">(</span><span class="nb">tostring</span><span class="p">(</span><span class="n">err</span><span class="p">))</span> <span class="kr">end</span>
+    <span class="kr">end</span>
+<span class="kr">end</span>
+
+<span class="c1">---- Handle player leaving</span>
+<span class="kd">local</span> <span class="kr">function</span> <span class="nf">OnPlayerRemoving</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span>
+    <span class="kr">if</span> <span class="ow">not</span> <span class="n">PlayerData</span><span class="p">[</span><span class="n">Player</span><span class="p">]</span> <span class="kr">then</span> <span class="kr">return</span> <span class="kr">end</span>
+    <span class="n">PlayerData</span><span class="p">[</span><span class="n">Player</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="kr">end</span>
+
+<span class="c1">---- Signals</span>
+<span class="n">Library</span><span class="p">.</span><span class="n">PlayerAdded</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">OnPlayerAdded</span><span class="p">)</span>
+<span class="n">Library</span><span class="p">.</span><span class="n">PlayerRemoving</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="n">OnPlayerAdded</span><span class="p">)</span>
+
+<span class="n">Network</span><span class="p">:</span><span class="n">BindFunctions</span><span class="p">({</span>
+    <span class="c1">---- Handle clients requesting data</span>
+    <span class="n">GetData</span> <span class="o">=</span> <span class="n">ReturnData</span>
+<span class="p">})</span>
+</code></pre></div>
+The code shown uses caching to solve the yielding issue. Whenever a player joins, their data is fetched and stored in a dictionary for future use. Consequently, instead of repetitively using <code>GetDataAsync</code> whenever data is requested, the script efficiently retrieves it from the dictionary instead. This method allows for high performance lookups of the player data and is recommended whenever dealing with a players data.</p>
+<h4 id="dataloaded">DataLoaded()<a class="headerlink" href="#dataloaded" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">DataSystem</span><span class="p">.</span><span class="n">DataLoaded</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">DataPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<p>Returns if the player data has been loaded on a specific player.</p>
+<h4 id="deletedataasync">DeleteDataAsync()<a class="headerlink" href="#deletedataasync" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">DataSystem</span><span class="p">.</span><span class="n">DeleteDataAsync</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">DataPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">void</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">This Function Yields</p>
+<p>Take into consideration that this function can yield. It is encouraged to ensure that your code accommodates this behavior when using the function.</p>
+</div>
+<p>Deletes all game data for a specific player. This is not a reversable process so make sure that when this function is used, it is tested thoroughly to make sure it has been implemented correctly.</p>
+<h3 id="badges">Badges<a class="headerlink" href="#badges" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Badges</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<p>This module contains and returns all of the functions related to badges.</p>
+<h4 id="give">Give<a class="headerlink" href="#give" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Badges</span><span class="p">.</span><span class="n">Give</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">AwardedPlayer</span><span class="p">,</span><span class="w"> </span><span class="n">BadgeID</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<p>Awards a badge to the player.</p>
+<h3 id="boosts">Boosts<a class="headerlink" href="#boosts" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Boosts</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<p>This module contains and returns all of the functions related to player boosts.</p>
+<h4 id="getboost">GetBoost<a class="headerlink" href="#getboost" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Boosts</span><span class="p">.</span><span class="n">GetBoost</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">BoostedPlayer</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">BoostName</span><span class="p">,</span><span class="w"> </span><span class="n">PlayerData</span><span class="w"> </span><span class="n">Data</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">This Function Yields</p>
+<p>Take into consideration that this function can yield. It is encouraged to ensure that your code accommodates this behavior when using the function.</p>
+</div>
+<p>Checks and returns if a given boost is active for a specific player. Data is an optional parameter however if not added, this function can yield.</p>
+<h4 id="useboost">UseBoost<a class="headerlink" href="#useboost" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Boosts</span><span class="p">.</span><span class="n">UseBoost</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">BoostedPlayer</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">BoostName</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">BoostTime</span><span class="p">,</span><span class="w"> </span><span class="n">PlayerData</span><span class="w"> </span><span class="n">Data</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">This Function Yields</p>
+<p>Take into consideration that this function can yield. It is encouraged to ensure that your code accommodates this behavior when using the function.</p>
+</div>
+<p>Uses a boost for a specific player if they own more than 0. Returns true or false depending on if the boost was used or not. Data is an optional parameter however if not added, this function can yield.</p>
+<h4 id="addboost">AddBoost<a class="headerlink" href="#addboost" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Boosts</span><span class="p">.</span><span class="n">AddBoost</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">BoostedPlayer</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">BoostName</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Amount</span><span class="p">,</span><span class="w"> </span><span class="n">PlayerData</span><span class="w"> </span><span class="n">Data</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Notice</p>
+<p>This module is only accessible on the server. Please be aware of this before using it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">This Function Yields</p>
+<p>Take into consideration that this function can yield. It is encouraged to ensure that your code accommodates this behavior when using the function.</p>
+</div>
+<p>Adds a boost to a specific players inventory. Returns true or false depending on if the boost was added or not. Data is an optional parameter however if not added, this function can yield.</p>
+<h2 id="shared-modules">Shared Modules<a class="headerlink" href="#shared-modules" title="Permanent link">&para;</a></h2>
+<h4 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Index</span>
+</code></pre></div>
+The Index module serves as a container module for different data modules (different from the <code>DataSystem</code>).</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Index</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Index</span>
+<span class="kd">local</span> <span class="n">DataModuleName</span> <span class="o">=</span> <span class="n">Index</span><span class="p">.</span><span class="n">DataModuleName</span>
+</code></pre></div></p>
+<h4 id="shared">Shared<a class="headerlink" href="#shared" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Shared</span>
+</code></pre></div>
+The Shared module holds most general game data and stats. For example, currencies, Settings, Codes, etc...</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Currencies</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Shared</span><span class="p">.</span><span class="n">Currencies</span>
+</code></pre></div></p>
+<h4 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Variables</span>
+</code></pre></div>
+The Variables module holds all public variables for a game. Some are only accessible through the client or server.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Variables</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Variables</span>
+<span class="kd">local</span> <span class="n">Version</span> <span class="o">=</span> <span class="n">Variables</span><span class="p">.</span><span class="n">Version</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Version</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;1.0.0a&quot;</span>
+</code></pre></div></p>
+<h3 id="player">Player<a class="headerlink" href="#player" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Player</span>
+</code></pre></div>
+The player module contains and returns all the functions for the player.</p>
+<h4 id="get">Get<a class="headerlink" href="#get" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">Object</span><span class="p">,</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="n">GetPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Variant</span>
+</code></pre></div>
+Returns an object from the player. Object name is not case sensitive. Objects supported:</p>
+<ul>
+<li>Player</li>
+<li>Character</li>
+<li>RootPart</li>
+<li>Torso</li>
+<li>Humanoid</li>
+<li>PlayerGui</li>
+<li>StarterPlayer</li>
+<li>Backpack</li>
+<li>Camera</li>
+<li>Name</li>
+</ul>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="c1">---- Framework Modules</span>
+<span class="kd">local</span> <span class="n">PlayerModule</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Player</span>
+
+<span class="c1">---- Variables</span>
+<span class="kd">local</span> <span class="n">Player</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="n">LocalPlayer</span>
+<span class="kd">local</span> <span class="n">Character</span> <span class="o">=</span> <span class="n">PlayerModule</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="s2">&quot;Character&quot;</span><span class="p">,</span> <span class="n">Player</span><span class="p">)</span>
+<span class="kd">local</span> <span class="n">Humanoid</span> <span class="o">=</span> <span class="n">PlayerModule</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="s2">&quot;RootPart&quot;</span><span class="p">,</span> <span class="n">Player</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="network">Network<a class="headerlink" href="#network" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Network</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Notice</p>
+<p>This module was created by a 3rd party and may not be given the same documentation from Anonymous Creations.</p>
+</div>
+<p>A networking module to improve client-server and server-client communication. This is a 3rd party module. To learn more about it, please use the <abbr title="Application Programming Interface">API</abbr> within the module.</p>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<h4 id="animation">Animation()<a class="headerlink" href="#animation" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Animation</span><span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="w"> </span><span class="n">Humanoid</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">AnimationTrack</span>
+</code></pre></div>
+Plays and animation on a humanoid and returns the AnimationTrack.</p>
+<h4 id="createparticle">CreateParticle()<a class="headerlink" href="#createparticle" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CreateParticle</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">Position</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Part</span><span class="p">,</span><span class="w"> </span><span class="n">Attachment</span>
+</code></pre></div>
+PLACEHOLDER TEXT.</p>
+<h4 id="generatename">GenerateName()<a class="headerlink" href="#generatename" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GenerateName</span><span class="p">()</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
+Returns a random pet name.</p>
+<h4 id="loop">Loop()<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Loop</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="n">Cooldown</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">RunType</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">Function</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">RBXScriptConnection</span>
+</code></pre></div>
+Creates a loop that a function can run in until broken.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Loop</span>
+
+<span class="n">task</span><span class="p">.</span><span class="n">spawn</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+    <span class="n">Loop</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Loop</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Heartbeat&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One second has passed&quot;</span><span class="p">)</span>
+    <span class="kr">end</span><span class="p">)</span>
+<span class="kr">end</span><span class="p">)</span>
+
+<span class="c1">---- Code</span>
+
+<span class="n">Loop</span><span class="p">:</span><span class="n">Disconnect</span><span class="p">()</span>
+</code></pre></div></p>
+<h4 id="scrollingresize">ScrollingResize()<a class="headerlink" href="#scrollingresize" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">ScrollingResize</span><span class="p">(</span><span class="n">ScrollingFrame</span><span class="w"> </span><span class="n">Frame</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">CellSize</span><span class="p">)</span>
+</code></pre></div>
+Resizes a scrolling from to make sure that every cell is visible.</p>
+<h4 id="table">Table()<a class="headerlink" href="#table" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="n">Table</span><span class="w"> </span><span class="n">Array</span><span class="p">,</span><span class="w"> </span><span class="n">Variant</span><span class="w"> </span><span class="n">Value</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Action</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Variant</span>
+</code></pre></div>
+Performs an action on a table. Supported actions:</p>
+<ul>
+<li>Insert (Inserts a value in the table)</li>
+<li>Find (Returns the index of the value in a table)</li>
+<li>Remove (Removes a value in a table)</li>
+</ul>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Array</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="n">Array</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Insert&quot;</span><span class="p">)</span>
+<span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="n">Array</span><span class="p">,</span> <span class="s2">&quot;Two&quot;</span><span class="p">,</span> <span class="s2">&quot;Insert&quot;</span><span class="p">)</span>
+<span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="n">Array</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Insert&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">Array</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="mi">1</span> <span class="s2">&quot;Two&quot;</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="n">Array</span><span class="p">,</span> <span class="s2">&quot;Two&quot;</span><span class="p">,</span> <span class="s2">&quot;Find&quot;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="mi">2</span>
+
+<span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="n">Array</span><span class="p">,</span> <span class="s2">&quot;Two&quot;</span><span class="p">,</span> <span class="s2">&quot;Remove&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">unpack</span><span class="p">(</span><span class="n">Array</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="mi">1</span> <span class="mi">3</span>
+</code></pre></div></p>
+<h4 id="tween">Tween()<a class="headerlink" href="#tween" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Tween</span><span class="p">(</span><span class="n">Instance</span><span class="w"> </span><span class="n">Object</span><span class="p">,</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">Properties</span><span class="p">,</span><span class="w"> </span><span class="n">Table</span><span class="w"> </span><span class="n">TweenInfo</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Tween</span>
+</code></pre></div>
+Creates, plays, and returns a tween on an object.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">Part</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">GameDebris</span><span class="p">.</span><span class="n">Part</span>
+
+<span class="kd">local</span> <span class="n">PartTween</span> <span class="o">=</span> <span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Tween</span><span class="p">(</span><span class="n">Part</span><span class="p">,</span> <span class="p">{</span><span class="n">Position</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">30</span><span class="p">)},</span> <span class="p">{</span><span class="mf">0.065</span><span class="p">,</span> <span class="s2">&quot;Exponential&quot;</span><span class="p">,</span> <span class="s2">&quot;Out&quot;</span><span class="p">})</span>
+</code></pre></div></p>
+<h3 id="audio">Audio<a class="headerlink" href="#audio" title="Permanent link">&para;</a></h3>
+<h4 id="playsound">PlaySound()<a class="headerlink" href="#playsound" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">PlaySound</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">SoundName</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Plays</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Cooldown</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Volume</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Position</span><span class="p">)</span>
+</code></pre></div>
+Plays a sound. Note the only required parameter is the sound name.</p>
+<h4 id="loopsound">LoopSound()<a class="headerlink" href="#loopsound" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">LoopSound</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">SoundName</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Volume</span><span class="p">)</span>
+</code></pre></div>
+Plays a sound on a loop unless stopped otherwise.</p>
+<h4 id="stopsound">StopSound()<a class="headerlink" href="#stopsound" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">StopSound</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">SoundName</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">void</span>
+</code></pre></div>
+Stops a sound that's being played.</p>
+<p><strong>Application</strong>
+<div class="highlight"><pre><span></span><code><span class="c1">---- Library</span>
+<span class="kd">local</span> <span class="n">Library</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">.</span><span class="n">ReplicatedStorage</span><span class="p">:</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Framework&quot;</span><span class="p">):</span><span class="n">WaitForChild</span><span class="p">(</span><span class="s2">&quot;Library&quot;</span><span class="p">))</span>
+<span class="kr">while</span> <span class="p">(</span><span class="ow">not</span> <span class="n">Library</span><span class="p">.</span><span class="n">Loaded</span><span class="p">)</span> <span class="kr">do</span>  <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;RunService&quot;</span><span class="p">).</span><span class="n">Heartbeat</span><span class="p">:</span><span class="n">Wait</span><span class="p">()</span> <span class="kr">end</span>
+
+<span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">LoopSound</span><span class="p">(</span><span class="s2">&quot;Music1&quot;</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">task</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+
+<span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">StopSound</span><span class="p">(</span><span class="s2">&quot;Music1&quot;</span><span class="p">)</span> <span class="c1">---- Stops the sound</span>
+</code></pre></div></p>
+<h3 id="formatters">Formatters<a class="headerlink" href="#formatters" title="Permanent link">&para;</a></h3>
+<h4 id="abbreviation">Abbreviation()<a class="headerlink" href="#abbreviation" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Abbreviation</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
+Takes a numerical input and returns a number as a string with as an abbreviation: 1K 10K 100K...</p>
+<h4 id="commas">Commas()<a class="headerlink" href="#commas" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Commas</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
+Takes a numerical input and returns a formatted string of the number with commas added as thousands separators.</p>
+<h4 id="formatminutes">FormatMinutes()<a class="headerlink" href="#formatminutes" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">FormatMinutes</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
+Takes a numerical input and returns a formatted string of the number as a timer: hh:mm.</p>
+<h4 id="formatseconds">FormatSeconds()<a class="headerlink" href="#formatseconds" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">FormatSeconds</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
+Takes a numerical input and returns a formatted string of the number as a timer: hh:mm:ss</p>
+<h3 id="math">Math<a class="headerlink" href="#math" title="Permanent link">&para;</a></h3>
+<h4 id="cubicbezier">CubicBezier()<a class="headerlink" href="#cubicbezier" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CubicBezier</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos1</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos2</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos3</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos4</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Time</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Vector3</span>
+</code></pre></div>
+Returns a cubic Bezier curve.</p>
+<h4 id="quadbezier">QuadBezier()<a class="headerlink" href="#quadbezier" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">QuadBezier</span><span class="p">(</span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos1</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos2</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Pos3</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Time</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Vector3</span>
+</code></pre></div>
+Returns a quad Bezier curve.</p>
+<h4 id="inverselerp">InverseLerp()<a class="headerlink" href="#inverselerp" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">InverseLerp</span><span class="p">(</span><span class="n">Input1</span><span class="p">,</span><span class="w"> </span><span class="n">Input2</span><span class="p">,</span><span class="w"> </span><span class="n">Value</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">number</span>
+</code></pre></div>
+Returns the inverse lerp of the inputs (Solves for time). Input1 and Input2 can be a number or a Vector3 as long as both are the same type. Value has to be the same type as the Inputs.</p>
+<h4 id="lerp">Lerp()<a class="headerlink" href="#lerp" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Lerp</span><span class="p">(</span><span class="n">Input1</span><span class="p">,</span><span class="w"> </span><span class="n">Input2</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Time</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">number</span>
+</code></pre></div>
+Returns the linear interpolation of the inputs. Input1 and Input2 can be a number or a Vector3 as long as both are the same type.</p>
+<h4 id="random">Random()<a class="headerlink" href="#random" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Random</span><span class="p">(</span><span class="n">number</span><span class="w"> </span><span class="n">Min</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Max</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">Rounded</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">Seed</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">number</span>
+</code></pre></div>
+Returns a random number within a given range. Rounded determines if the number will round to the nearest integer. Both Rounded and Seed are optional.</p>
+<h3 id="playerverification">PlayerVerification<a class="headerlink" href="#playerverification" title="Permanent link">&para;</a></h3>
+<h4 id="getplatform">GetPlatform()<a class="headerlink" href="#getplatform" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">GetPlatform</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+</code></pre></div>
+Returns the platform the player is using.</p>
+<ul>
+<li>Mobile</li>
+<li>Console</li>
+<li>Computer</li>
+</ul>
+<h4 id="isingroup">IsInGroup()<a class="headerlink" href="#isingroup" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">IsInGroup</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player is in the group Anonymous Creations.</p>
+<h4 id="isverified">IsVerified()<a class="headerlink" href="#isverified" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">IsVerified</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player is ID or phone verified.</p>
+<h4 id="premium">Premium()<a class="headerlink" href="#premium" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">Premium</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player has a premium subscription.</p>
+<h3 id="policies">Policies<a class="headerlink" href="#policies" title="Permanent link">&para;</a></h3>
+<h4 id="canseeads">CanSeeAds()<a class="headerlink" href="#canseeads" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CanSeeAds</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player can see advertisements in game.</p>
+<h4 id="cantrade">CanTrade()<a class="headerlink" href="#cantrade" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CanTrade</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player has access to trading in game.</p>
+<h4 id="canviewlinks">CanViewLinks()<a class="headerlink" href="#canviewlinks" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">CanViewLinks</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player can view links in game.</p>
+<h4 id="hasaccesstorandomitems">HasAccessToRandomItems()<a class="headerlink" href="#hasaccesstorandomitems" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">Library</span><span class="p">.</span><span class="n">Functions</span><span class="p">.</span><span class="n">HasAccessToRandomItems</span><span class="p">(</span><span class="n">Player</span><span class="w"> </span><span class="n">CheckPlayer</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">bool</span>
+</code></pre></div>
+Returns if the player has access to paid random items in game.</p>
+<h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
+<h3 id="error-list">Error List<a class="headerlink" href="#error-list" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>101</code></td>
+<td>Module failed to load</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/vNdmbTjhYD" target="_blank" rel="noopener" title="Anonymous Creations Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "content.tabs.link", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
